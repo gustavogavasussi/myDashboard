@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Orçamento Escolar</title>
+    <title>my Dashboard</title>
 
     <!-- Font Awesome Icons -->
     <link rel="stylesheet" href="../assets/css/fontawesome-free.css">
@@ -78,7 +78,7 @@
                         <a href="#" class="dropdown-item">
                             <!-- Message Start -->
                             <div class="media">
-                                <img src="../assets/img/AdminLTELogo.png" alt="User Avatar"
+                                <img src="dist/img/user8-128x128.jpg" alt="User Avatar"
                                     class="img-size-50 img-circle mr-3">
                                 <div class="media-body">
                                     <h3 class="dropdown-item-title">
@@ -95,7 +95,7 @@
                         <a href="#" class="dropdown-item">
                             <!-- Message Start -->
                             <div class="media">
-                                <img src="../assets/img/user2-160x160.jpg" alt="User Avatar"
+                                <img src="dist/img/user3-128x128.jpg" alt="User Avatar"
                                     class="img-size-50 img-circle mr-3">
                                 <div class="media-body">
                                     <h3 class="dropdown-item-title">
@@ -174,32 +174,38 @@
                     <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu"
                         data-accordion="false">
                         <!-- Add icons to the links using the .nav-icon class
-                           with font-awesome or any other icon font library -->
-                        <li class="nav-item has-treeview menu-open">
+                     with font-awesome or any other icon font library -->
                         <li class="nav-item">
-                            <a class="nav-link" href="../index.html">
+                            <a href="../index.html" class="nav-link">
                                 <i class="fas fa-tachometer-alt"></i>
-                                <p>Dashboard</p>
+                                <p>
+                                    Dashboard
+                                </p>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="../pages/alunos.html">
+                            <a href="../pages/alunos.html" class="nav-link">
                                 <i class="fas fa-user-graduate"></i>
-                                <p>Alunos</p>
+                                <p>
+                                    Alunos
+                                </p>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link active" href="../pages/orcamento.html">
-                                <i class="fas fa-money-bill-alt"></i>
-                                <p>Orçamento escolar</p>
+                            <a href="../pages/orcamento-escolar.html" class="nav-link active">
+                                <i class="fas fa-shopping-cart"></i>
+                                <p>
+                                    Orçamento Escolar
+                                </p>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="">
+                            <a href="../pages/s" class="nav-link">
                                 <i class="fas fa-door-open"></i>
-                                <p>Sair</p>
+                                <p>
+                                    Sair
+                                </p>
                             </a>
-                        </li>
                         </li>
                     </ul>
                 </nav>
@@ -227,15 +233,13 @@
                 </div><!-- /.container-fluid -->
             </div>
             <!-- /.content-header -->
-
-            <!-- Main content -->
             <div class="content">
                 <div class="container-fluid">
                     <div class="row">
                         <div class="col-md-12">
-                            <div class="card card-primary">
+                            <div class="card card-gray">
                                 <div class="card-header">
-                                    <h3 class="card-title">Orçamento prévio de material escolar</h3>
+                                    <h3 class="card-title">Orçamento pedido de material escolar</h3>
 
                                     <div class="card-tools">
                                         <button type="button" class="btn btn-tool" data-card-widget="collapse"><i
@@ -248,80 +252,90 @@
                                 <div class="card-body">
                                     <form>
                                         <div class="row">
+
                                             <div class="col-sm-12 col-md-4 col-lg-4">
                                                 <div class="form-group">
                                                     <label for="nomeAluno">Nome do aluno</label>
                                                     <input id="nomeAluno" type="text" class="form-control" required>
                                                 </div>
                                             </div>
+
                                             <div class="form-group col-sm-12 col-md-4 col-lg-3">
-                                                <label for="gastarMaterial">Posso gastar até:</label>
+                                                <label for="gastarAte">Posso gastar até</label>
                                                 <div class="input-group mb-3">
                                                     <div class="input-group-prepend">
-                                                        <span class="input-group-text" id="gastarMaterial"><a><i
+                                                        <span class="input-group-text"><a><i
                                                                     class="fas fa-dollar-sign"></i></a></span>
                                                     </div>
-                                                    <input type="number" class="form-control" aria-label="gastarMaterial"
-                                                        aria-describedby="gastarMaterial" required>
+                                                    <input id="gastarAte" type="number" class="form-control" required>
                                                 </div>
                                             </div>
                                         </div>
+
                                         <div class="row">
-                                            <div class="col-sm-12 col-md-3 col-lg-2">
+                                            <div class="col-sm-12 col-md-4 col-lg-3">
                                                 <div class="form-group">
-                                                    <label for="materialEscolar">Material Escolar</label>
-                                                    <select id="materialEscolar" class="form-control" required>
-                                                        <option value=""></option>
+                                                    <label for="escolhaOpcao">Material escolar</label>
+                                                    <select class="form-control" id="escolhaOpcao" required>
+
                                                     </select>
                                                 </div>
                                             </div>
                                             <div class="col-sm-12 col-md-4 col-lg-3">
                                                 <div class="form-group">
-                                                    <label for="quantidade">Quantidade</label>
-                                                    <input id="quantidade" type="number" class="form-control" required>
+                                                    <label for="quantidadeProduto">Quantidade</label>
+                                                    <input id="quantidadeProduto" type="number" class="form-control"
+                                                        required>
                                                 </div>
                                             </div>
+
                                             <div class="form-group col-sm-12 col-md-4 col-lg-3">
                                                 <label for="precoUnitario">Preço Unitário</label>
                                                 <div class="input-group mb-3">
                                                     <div class="input-group-prepend">
-                                                        <span class="input-group-text" id="precoUnitario"><a><i
+                                                        <span class="input-group-text"><a><i
                                                                     class="fas fa-dollar-sign"></i></a></span>
                                                     </div>
-                                                    <input type="text" class="form-control" aria-label="precoUnitario"
-                                                        aria-describedby="precoUnitario">
+                                                    <input type="text" class="form-control" id="precoUnitario" required>
                                                 </div>
                                             </div>
+
                                             <div class="col-sm-12 col-md-3 col-lg-3">
-                                                <div class="form-group pt-24">
-                                                    <button type="button" class="btn btn-primary" id="Button" onclick="focusOutz()">
+                                                <div class="form-group pt-31">
+                                                    <button type="button" class="btn btn-primary" id="botaozao"
+                                                        onclick="adicionarItem()" disabled>
                                                         <i class="fas fa-plus"></i> Adicionar
                                                     </button>
                                                 </div>
                                             </div>
-
-                                            <h4 <i class="fas fa-tasks"></i> Lista de Materiais do aluno: </h4>
                                         </div>
                                         <div class="row">
-                                            <div class="col-sm-8">
+
+                                            <h2 class="mg-31">
+                                                <i class="fas fa-list-ul"> </i>Lista de Materiais do aluno:
+                                            </h2>
+                                        </div>
+                                        <div class="row mg-15">
+                                            <div class="col-sm-9">
                                                 <div class="card-body table-responsive p-0">
-                                                    <table id="listaMaterial" class="table table-hover">
+                                                    <table id="materiaisEscolhidos" class="table table-hover">
                                                         <thead>
                                                             <tr>
                                                                 <th>Material</th>
                                                                 <th>Quantidade</th>
-                                                                <th>Valor Unitário</th>
+                                                                <th>Valor unitário</th>
                                                                 <th>Total</th>
                                                             </tr>
                                                         </thead>
                                                     </table>
                                                 </div>
                                             </div>
-                                            <div class="col-lg-3 col-8">
+
+                                            <div class="col-sm-2">
                                                 <!-- small card -->
-                                                <div class="small-box bg-gradient-green">
+                                                <div class="small-box bg-gradient-green" id="camaro">
                                                     <div class="inner">
-                                                        <h3>150</h3>
+                                                        <h3 id="totalDinheiro"></h3>
 
                                                         <p>New Orders</p>
                                                     </div>
@@ -336,13 +350,21 @@
                                         </div>
                                     </form>
                                 </div>
-                                <!-- /.card-body -->
+
+
+
+
                             </div>
                         </div>
+
+
                     </div>
+
+
                 </div>
             </div>
         </div>
+
         <!-- #endregion /.content-wrapper -->
 
         <!-- #region Control Sidebar -->
@@ -366,21 +388,23 @@
             reserved.
         </footer>
         <!--#endregion -->
-    </div>
 
 
-    <!--#region Scripts Requeridos -->
 
-    <!-- jQuery -->
-    <script src="../assets/js/jquery.min.js"></script>
-    <!-- Bootstrap 4 -->
-    <script src="../assets/js/bootstrap.bundle.min.js"></script>
-    <!-- AdminLTE App -->
-    <script src="../assets/js/adminlte.min.js"></script>
-    <script src="../assets/js/jquery.validate.js"></script>
-    <script src="../assets/js/toastr.min.js"></script>
-    <script src="../assets/js/orcamento.js"></script>
-    <!--#endregion-->
+        <!--#region Scripts Requeridos -->
+
+        <!-- jQuery -->
+        <script src="../assets/js/jquery.min.js"></script>
+        <script src="../assets/js/jquery.validate.js"></script>
+        <!-- Bootstrap 4 -->
+        <script src="../assets/js/bootstrap.bundle.min.js"></script>
+        <!-- AdminLTE App -->
+        <script src="../assets/js/adminlte.min.js"></script>
+
+        <script src="../assets/js/toastr.min.js"></script>
+        <script src="../assets/js/orcamento.js"></script>
+
+        <!--#endregion-->
 </body>
 
 </html>
